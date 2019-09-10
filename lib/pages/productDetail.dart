@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../model/product.dart';
 import '../utils/style.dart';
+import 'detailTabbar.dart';
 
 
 class ProductDetail extends StatelessWidget {
@@ -44,10 +45,14 @@ class ProductDetail extends StatelessWidget {
                             color: Colors.white,
                             shape: BoxShape.circle,
                           ),
-                          child: Icon(Icons.add_shopping_cart,
-                            size: 18,
-                          ),
-                        )
+                          child: IconButton(
+                            icon: Icon(Icons.description),
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (_) => DetailsTabBar()));
+                            },
+                          )
+                        ),
                       ],
                     ),
                   ),
@@ -93,11 +98,11 @@ class ProductDetail extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Text(
-                          "RS.+{product.price}",
-                          style: AppStyle.headingStyle,
+                          "MRP "+product.price,
+                          style: AppStyle.descStyle,
                         ),
                         FlatButton(
-                          child: Text("Add to cart".toUpperCase(),
+                          child: Text("Your Story".toUpperCase(),
                               style: AppStyle.flatButtonStyle),
                           onPressed: () {},
                         )
