@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../model/product.dart';
 import '../utils/style.dart';
 import 'detailTabbar.dart';
+import 'userStory.dart';
 
 
 class ProductDetail extends StatelessWidget {
@@ -104,7 +105,10 @@ class ProductDetail extends StatelessWidget {
                         FlatButton(
                           child: Text("Your Story".toUpperCase(),
                               style: AppStyle.flatButtonStyle),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (_) => UserStory()));
+                          },
                         )
                       ],
                     ),

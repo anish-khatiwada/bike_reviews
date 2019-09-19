@@ -34,7 +34,7 @@ class TabState extends State<DetailsTabBar> with SingleTickerProviderStateMixin{
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Scaffold(
-      appBar: new AppBar(title:new Text("Pages"),backgroundColor: Colors.pinkAccent,
+      appBar: new AppBar(title:new Text("Report"),backgroundColor: Colors.pinkAccent,
         bottom: new TabBar(
           controller: controller,
             tabs: <Tab>[
